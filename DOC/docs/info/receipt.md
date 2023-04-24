@@ -1,71 +1,60 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 ---
 
 # 결제서비스사,결제대행사 정보
 
 결제서비스 및 결제대행사 정보를 요청하는 예시입니다.
 
-- 테스트요청주소 : https://testpgapi2.korpay.com/api/receipt POST
+- 테스트요청주소 : https://testpgapi2.korpay.com/api/receipt <Green>`POST`</Green>
 
 ## 파라미터 정보
 
 
 ### 요청 파라미터
 ---
-**mid** String size(10)
-
+**mid** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
 KORPAY발급 관리계정
 
 ---
-**ordNo** String size(30)
-
+**ordNo** <Green>**String**</Green> <Gray>`30byte`</Gray><br/>
 주문번호
 
 ### 응답 파라미터
 ---
-**van_co_name** String size(100)
-
+**van_co_name** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 결제대행사 회사명
 
 ---
-**van_co_rep_name** String size(100)
-
+**van_co_rep_name** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 결제대행사 대표자명
 
 ---
-**van_co_addr** String size(100)
-
+**van_co_addr** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 결제대행사 주소
 
 ---
-**van_co_no** String size(100)
-
+**van_co_no** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 결제대행사 사업자번호
 
 ---
-**pg_co_name** String size(100)
-
+**pg_co_name** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 결제서비스사 회사명
 
 ---
-**pg_co_rep_name** String size(100)
-
+**pg_co_rep_name** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 결제서비스사 대표자명
 
 ---
-**pg_co_addr** String size(100)
-
+**pg_co_addr** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 결제서비스사 주소
 
 ---
-**van_co_no** String size(100)
-
+**van_co_no** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 결제대행사 사업자번호
 
 ---
-**res_msg** String
-
+**res_msg** <Green>**String**</Green> <Gray>`1000byte`</Gray><br/>
 응답메세지
 
 ## 대행사 정보 요청 예시
@@ -75,7 +64,6 @@ KORPAY발급 관리계정
 ```shell title="요청예시"
 curl --request POST \
   --url https://testpgapi2.korpay.com/api/receipt \
-  --header 'Authorization: Basic dGVzdF9za196WExrS0V5cE5BcldtbzUwblgzbG1lYXhZRzVSOg==' \
   --header 'Content-Type: application/json' \
   --data '{"ordNo":"123456789112345678911234567891","mid":"ktest5578m"}'
 ```
@@ -102,3 +90,20 @@ curl --request POST \
     "res_msg": "해당 mid의 주문번호가 존재하지 않습니다."
 }
 ```
+export const Green = ({children}) => (
+<span
+style={{
+color:"#00A661"
+}}>
+{children}
+</span>
+);
+
+export const Gray = ({children}) => (
+<span
+style={{
+color:"#898989"
+}}>
+{children}
+</span>
+);

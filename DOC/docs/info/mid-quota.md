@@ -1,12 +1,12 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # MID할부개월수 조회
 
 결제시 사용가능한 할부개월수를 조회하는 방법입니다.
 
-- 테스트요청주소 : https://testpgapi2.korpay.com/api/init POST
+- 테스트요청주소 : https://testpgapi2.korpay.com/api/init <Green>`POST`</Green>
 
 ## 파라미터 정보
 
@@ -16,51 +16,42 @@ sidebar_position: 2
 
 ### 요청 파라미터
 ---
-**mid** String size(10)
-
+**mid** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
 KORPAY발급 관리계정
 
 ---
-**mkey** String size(100)
-
+**mkey** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 MID 암호화키
 
 
 
 ### 응답 파라미터
 ---
-**mkey** String size(100)
-
+**mkey** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 MID 암호화 키
 
 ---
-**mid** String size(10)
-
+**mid** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
 KORPAY발급 관리계정
 
 ---
-**quota** String size(2)
-
+**quota** <Green>**String**</Green> <Gray>`2byte`</Gray><br/>
 할부 가능 개월(00: 일시불 02:2개월...)
 
 ---
-**manual_flg** String size(1)
-
+**manual_flg** <Green>**String**</Green> <Gray>`1byte`</Gray><br/>
 수기결제 가능여부(0: 불가능 1: 가능)
 
 ---
-**sms_flg** String size(1)
-
+**sms_flg** <Green>**String**</Green> <Gray>`1byte`</Gray><br/>
 SMS 결제 가능여부(0: 불가능 1: 가능)
 
 ---
-**res_code** String size(4)
-
+**res_code** <Green>**String**</Green> <Gray>`4byte`</Gray><br/>
 응답코드(0000 : 정상, 9999: 에러)
 
 ---
-**res_msg** String
-
+**res_msg** <Green>**String**</Green> <Gray>`1000byte`</Gray><br/>
 응답메세지
 
 ## 할부개월수 조회예시
@@ -88,3 +79,20 @@ curl --request POST \
 }
 
 ```
+export const Green = ({children}) => (
+<span
+style={{
+color:"#00A661"
+}}>
+{children}
+</span>
+);
+
+export const Gray = ({children}) => (
+<span
+style={{
+color:"#898989"
+}}>
+{children}
+</span>
+);

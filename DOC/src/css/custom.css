@@ -15,7 +15,12 @@
   --ifm-color-primary-lightest: #ff1e2e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: 'Malgun Gothic','맑은 고딕',sans-serif;
+  --ifm-font-family-base: 'omyu_pretty',sans-serif;
+  --ifm-font-family-monospace: omyu_pretty;
+}
+
+.table-of-contents{
+  font-size: 1rem !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -28,7 +33,15 @@
   --ifm-color-primary-lighter: #fc0012;
   --ifm-color-primary-lightest: #ff1e2e;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-font-family-base: 'Malgun Gothic','맑은 고딕',sans-serif;
+  --ifm-font-family-base: 'omyu_pretty',sans-serif;
+  --ifm-font-family-monospace: omyu_pretty;
+}
+
+@font-face {
+  font-family: 'omyu_pretty';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /*

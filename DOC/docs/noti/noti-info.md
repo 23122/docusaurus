@@ -4,37 +4,18 @@ sidebar_position: 1
 
 # 연동 기본 정보
 
-수기결제 API 연동에 대한 기본 정보 설명입니다.
+실시간결제내역(Noti) 연동에 대한 기본 정보 설명입니다.
 
-:::info
-모든 테스트는 계약이후 진행되어야 합니다.
-:::
+## 노티 설명
 
-## 필수값
+1. 가맹점에서 응답서버를 준비하셔아 합니다.
+2. 응답서버 URL를 메일로 영업담당자에게 요청
+3. 결제내역을 <Green>`POST`</Green> 방식으로 전달합니다.
+4. 노티 수신확인은 `HTTP STATUS`로 확인합니다. (200:수신, 이외 미수신)
+5. 미수신 일경우 2분간격으로 5회 재전송 실시합니다.
+6. 연동문의는 영업담당자에게 문의
+7. 기술지원 (PG개발팀 : 070-7012-1447)
 
-1. 데이터 전송 방식은 <Green>`POST`</Green> 방식으로 전송합니다.
-2. hash : sha256(`mid` + `amt`) 영어문자 소문자.
-3. ordNo : 주문번호 길이 반드시 30자리 중복 x (취소요청시 고유값)
-4. 할부기간제한: 5만원이상 요청 건에 대해 12개월 제한(12개월 이상시 요청)
-5. 부분취소는 적용 안됨.
-
-## API 테스트 정보
-
-- 실제 결제가 이뤄지기 때문에 테스트시 연락 선행 필수 (PG개발팀 : 070-7012-1447)
-
-### 테스트 계정 정보
-
-- MID : ktest5578m
-- MKEY : G/pYro4XipgrmecKdlvWwkSfGcg4y(별도전달)
-
-export const Green = ({children}) => (
-<span
-style={{
-color:"#00A661"
-}}>
-{children}
-</span>
-);
 
 [//]: # (Create a file at `src/pages/my-react-page.js`:)
 
@@ -85,3 +66,12 @@ color:"#00A661"
 
 [//]: # ()
 [//]: # (A new page is now available at [http://localhost:3000/my-markdown-page]&#40;http://localhost:3000/my-markdown-page&#41;.)
+
+export const Green = ({children}) => (
+<span
+style={{
+color:"#00A661"
+}}>
+{children}
+</span>
+);

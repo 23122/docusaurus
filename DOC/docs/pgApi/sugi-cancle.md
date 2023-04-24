@@ -13,8 +13,7 @@ sidebar_position: 4
 
 ### 요청 파라미터
 ---
-**`ordNo`** <Green>**`String`**</Green> <Gray>`30byte`</Gray><br/>
-
+**ordNo** <Green>**String**</Green> <Gray>`30byte`</Gray><br/>
 주문번호
 
 ---
@@ -58,7 +57,6 @@ KORPAY발급 관리계정
 ```shell title="요청예시"
 curl --request POST \
   --url https://testpgapi2.korpay.com/api/cancel  \
-  --header 'Authorization: Basic dGVzdF9za196WExrS0V5cE5BcldtbzUwblgzbG1lYXhZRzVSOg==' \
   --header 'Content-Type: application/json' \
   --data '{"mid":"ktest5578m","ordNo","123456789112345678911234567891","canNm":"코페이","canMsg":"취소테스트","canAmt":"5000"}'
 ```

@@ -6,103 +6,85 @@ sidebar_position: 3
 
 수기결제를 요청하는 예시입니다.
 
-- 테스트요청주소 : https://testpgapi2.korpay.com/api/manualpay POST
+- 테스트요청주소 : https://testpgapi2.korpay.com/api/manualpay <Green>`POST`</Green>
 
 ## 파라미터 정보
 
 
 ### 요청 파라미터
 ---
-**ordNo** String size(30)
-
+**ordNo** <Green>**String**</Green> <Gray>`30byte`</Gray><br/>
 주문번호
 
 ---
-**mkey** String size(100)
-
+**mkey** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 MID 암호화키
 
 ---
-**mid** String size(10)
-
+**mid** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
 KORPAY발급 관리계정
 
 ---
-**goodsAmt** String size(12)
-
+**goodsAmt** <Green>**String**</Green> <Gray>`12byte`</Gray><br/>
 승인금액
 
 ---
-**cardNo** String size(20)
-
+**cardNo** <Green>**String**</Green> <Gray>`20byte`</Gray><br/>
 카드번호
 
 ---
-**expireYymm** String size(4)
-
+**expireYymm** <Green>**String**</Green> <Gray>`4byte`</Gray><br/>
 카드번호 유효기간(yyMM)
 
 ---
-**quotaMon** String size(2)
-
+**quotaMon** <Green>**String**</Green> <Gray>`2byte`</Gray><br/>
 할부기간(00(일시불), 01, 02...)
 
 ---
-**goodsAmt** String size(12)
-
+**goodsAmt**  <Green>**String**</Green> <Gray>`12byte`</Gray><br/>
 승인금액
 
 ---
-**buyer_nm** String size(50)
-
+**buyer_nm** <Green>**String**</Green> <Gray>`50byte`</Gray><br/>
 구매자명
 
 ---
-**goodsNm** String size(50)
-
+**goodsNm** <Green>**String**</Green> <Gray>`50byte`</Gray><br/>
 상품명
 
 ---
-**ordHp** String size(20)
-
+**ordHp** <Green>**String**</Green> <Gray>`20byte`</Gray><br/>
 구매자 휴대폰 번호(01012345678)
 
 ---
-**hashKey** String size(100)
-
+**hashKey** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 해시키(sha256(mid+amt) 영어문자 소문자)
 
 
 
 ### 응답 파라미터
 ---
-**res_code** String size(4)
-
+**res_code** <Green>**String**</Green> <Gray>`4byte`</Gray><br/>
 응답값(0000: 정상 이외의값 에러)
 
 ---
-**res_msg** String size(1000)
-
+**res_msg** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
 결과메세지
 
 ---
-**APP_NO** String size(16)
-
+**APP_NO** <Green>**String**</Green> <Gray>`16byte`</Gray><br/>
 승인번호(12345678)
 
 ---
-**APP_DATE** String size(10)
-
+**APP_DATE** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
 승인일시(yyyyMMddHHmmss)
 
 ---
-**VAN_CP_CD** String size(10)
-
+**VAN_CP_CD** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
 카드 발급사
 
 ---
-**VAN_ISS_CP_CD** String size(10)
-
+**VAN_ISS_CP_CD** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
 카드 매입사
 
 
@@ -113,7 +95,6 @@ KORPAY발급 관리계정
 ```shell title="요청예시"
 curl --request POST \
   --url https://testpgapi2.korpay.com/api/manualpay \
-  --header 'Authorization: Basic dGVzdF9za196WExrS0V5cE5BcldtbzUwblgzbG1lYXhZRzVSOg==' \
   --header 'Content-Type: application/json' \
   --data '{"ordNo":"123456789112345678911234567891","mkey":"G/pYro4XipgrmecKdlvWwkSfGcg4y","mid":"ktest5578m","goodsAmt":"5000","cardNo":"1234123412341234","expireYymm":"2301","quotaMon":"00","buyer_nm":"코페이","goodsNm":"결제테스트","ordHp":"01012345678","hashKey":""}'
 ```
@@ -129,3 +110,21 @@ curl --request POST \
     "VAN_CP_CD": "국민카드"
 }
 ```
+
+export const Green = ({children}) => (
+<span
+style={{
+color:"#00A661"
+}}>
+{children}
+</span>
+);
+
+export const Gray = ({children}) => (
+<span
+style={{
+color:"#898989"
+}}>
+{children}
+</span>
+);
