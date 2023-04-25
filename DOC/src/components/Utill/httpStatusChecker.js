@@ -176,7 +176,7 @@ function HttpStatusChecker() {
             <input
                 className='http'
                 type="text"
-                placeholder="http부터 전송받을 URL주소를 입력해주세요."
+                placeholder="전송받을 URL주소를 http부터 입력해주세요."
                 value={url}
                 onChange={(event) => setUrl(event.target.value)}
             />
