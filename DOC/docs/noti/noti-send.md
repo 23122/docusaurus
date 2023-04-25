@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# 실시간거래내역전송(Noti)
+# 노티 연동
 
 가맹점에서 응답서버를 준비하시면 해당주소로 결제내역을 <Green>`POST`</Green> 방식으로 전달합니다.
 
@@ -12,7 +12,7 @@ sidebar_position: 1
 ### 전달 파라미터
 
 ---
-**tid** <Green>**String**</Green> <Yellow>**Unique**</Yellow> <Red>단말기, 온라인</Red> <Gray>`10byte`</Gray><br/>
+**tid** <Green>**String**</Green> <Yellow>**Unique**</Yellow> <Red>단말기, 온라인</Red> <Gray>`30byte`</Gray> <br/>
 거래고유번호 (ex : ktest5561m01032012021713340481)
 
 ---

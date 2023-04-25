@@ -8,8 +8,15 @@ sidebar_position: 5
 
 ## 승인 테스트
 
+```json
+
+```
 
 ## 취소 테스트
+
+```json
+
+```
 
 export const Green = ({children}) => (
 <span

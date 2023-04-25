@@ -23,6 +23,38 @@
   font-size: 1rem !important;
 }
 
+.centered-image {
+  text-align: center;
+}
+input[placeholder], input, button, select{
+  font-size: 16px;
+  font-family: 'omyu_pretty',sans-serif;
+}
+.http{
+  width: 350px;
+  height: 30px;
+  border: none;
+  margin-right: 0.8rem;
+  border-radius: 3px;
+}
+.http:focus{
+  border: 2px rgb(38, 178, 38) solid;
+  outline: none;
+}
+.httpBtn{
+  border: none;
+  background-color: rgb(38, 178, 38);
+  color: #FFF;
+  border-radius: 3px;
+  height: 30px;
+  width: 60px;
+}
+.selecter{
+  border: none;
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #db0010;

@@ -6,7 +6,7 @@ sidebar_position: 1
 
 결제시 사용가능한 할부개월수를 조회하는 방법입니다.
 
-- 테스트요청주소 : https://testpgapi2.korpay.com/api/init <Green>`POST`</Green>
+- 요청주소 : https://testpgapi2.korpay.com/api/init <Green>`POST`</Green>
 
 ## 파라미터 정보
 

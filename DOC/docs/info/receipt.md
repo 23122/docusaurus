@@ -1,12 +1,12 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # 결제서비스사,결제대행사 정보
 
 결제서비스 및 결제대행사 정보를 요청하는 예시입니다.
 
-- 테스트요청주소 : https://testpgapi2.korpay.com/api/receipt <Green>`POST`</Green>
+- 요청주소 : https://testpgapi2.korpay.com/api/receipt <Green>`POST`</Green>
 
 ## 파라미터 정보
 
