@@ -2,8 +2,6 @@
 sidebar_position: 5
 ---
 
-import HttpStatusCode from '/src/components/Utill/HttpStatusChecker';
-
 # 노티연동 테스트
 
 구축하신 서버URL으로 노티 테스트를 진행 할 수 있는 페이지입니다.
@@ -22,6 +20,10 @@ import HttpStatusCode from '/src/components/Utill/HttpStatusChecker';
 
 ## 노티 테스트
 
+:::info
+고정값을 보내기 때문에 <Yellow>Unique</Yellow> 설정에 주의하시길 바랍니다.
+:::
+
 <HttpStatusCode />
 
 
@@ -38,6 +40,15 @@ export const Gray = ({children}) => (
 <span
 style={{
 color:"#898989"
+}}>
+{children}
+</span>
+);
+
+export const Yellow = ({children}) => (
+<span
+style={{
+color:"rgb(255, 196, 38)"
 }}>
 {children}
 </span>

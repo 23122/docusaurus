@@ -1,8 +1,0 @@
-{
-  "label": "수기결제 API",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "코페이 수기결제 API 객체 정보, 파라미터, 요청 및 응답 예제를 살펴보세요."
-  }
-}

@@ -1,0 +1,8 @@
+{
+  "label": "VID 가맹점 API",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "VID 총판 가맹점을 대상으로 거래내역 및 상세내역을 제공하는 API"
+  }
+}

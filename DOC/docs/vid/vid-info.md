@@ -4,28 +4,20 @@ sidebar_position: 1
 
 # 연동 기본 정보
 
-수기결제 API 연동에 대한 기본 정보 설명입니다.
+VID 총판 가맹점을 대상으로 거래내역 및 상세내역을 제공하는 API 설명입니다.
 
 :::info
-모든 테스트는 계약이후 진행되어야 합니다.
+API키 발급은 영업담당자에게 문의하시길 바랍니다.
 :::
 
-## 필수값
+## 상세설명
 
-1. 데이터 전송 방식은 <Green>`POST`</Green> 방식으로 전송합니다.
-2. hash : sha256(`mid` + `amt`) 영어문자 소문자.
-3. ordNo : 주문번호 길이 반드시 30자리 중복 x (취소요청시 고유값)
-4. 할부기간제한: 5만원이상 요청 건에 대해 12개월 제한(12개월 이상시 요청)
-5. 부분취소는 적용 안됨.
-
-## API 테스트 정보
-
-- 실제 결제가 이뤄지기 때문에 테스트시 연락 선행 필수 (PG개발팀 : 070-7012-1447)
+1. 데이터 전송 방식은 <Green>`GET`</Green> 방식으로 전송합니다.
 
 ### 테스트 계정 정보
 
-- MID : ktest5578m
-- MKEY : G/pYro4XipgrmecKdlvWwkSfGcg4y(별도전달)
+- VID = ctest0001a
+- API KEYS = 87c2c7752026253cfd0284a0f6be8ad9fdf07992d1b225326bce24c628db00d4
 
 export const Green = ({children}) => (
 <span
