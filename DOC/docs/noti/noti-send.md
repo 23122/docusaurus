@@ -19,7 +19,7 @@ sidebar_position: 1
 거래고유번호 (ex : ktest5561m01032012021713340481)
 
 ---
-**mid** <Green>**String**</Green> <Yellow>**Unique**</Yellow> <Red>단말기, 온라인</Red> <Gray>`10byte`</Gray><br/>
+**mid** <Green>**String**</Green> <Red>단말기, 온라인</Red> <Gray>`10byte`</Gray><br/>
 상점 ID (KORPAY제공 상점 MID)
 
 ---
@@ -40,7 +40,7 @@ sidebar_position: 1
 
 ---
 **cancelYN** <Green>**String**</Green> <Red>단말기, 온라인</Red> <br/>
-취소구분 (Y: 취소 N: 승인)
+취소구분 (Y: 취소, N: 승인)
 
 ---
 **ediNo**  <Green>**String**</Green> <Red>단말기, 온라인</Red> <br/>
@@ -67,7 +67,7 @@ VAN거래고유번호 (ex : 160737115186)
 구매자명
 
 ---
-**ordNo** <Green>**String**</Green> <Red>단말기, 온라인</Red> <br/>
+**ordNo** <Green>**String**</Green> <Yellow>**Unique**</Yellow> <Red>단말기, 온라인</Red> <br/>
 주문번호 (12016120230411100300)
 
 ---

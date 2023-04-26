@@ -23,11 +23,11 @@ sidebar_position: 4
 `tid`, `appNo` 중 택 1
 :::
 
-**tid** <Green>**String**</Green> <Yellow>**Unique**</Yellow> <Red>선택</Red> <Gray>`30byte`</Gray><br/>
+**tid** <Green>**String**</Green> <Yellow>**Unique**</Yellow> <Red>택 1</Red> <Gray>`30byte`</Gray><br/>
 거래고유번호 (ex : ktest5561m01032012021713340481)
 
 ---
-**appNo** <Green>**String**</Green> <Red>선택</Red> <Gray>`20byte`</Gray><br/>
+**appNo** <Green>**String**</Green> <Red>택 1</Red> <Gray>`20byte`</Gray><br/>
 카드사 승인번호(12345678)
 
 
