@@ -124,7 +124,7 @@ sidebar_position: 4
 요청 예시
 
 ```shell title="요청예시"
-curl --location 'https://testpgapi.korpay.com/api/payments/detail?id=ctest0001a&tid=ktest6201m01012301251537000703' \' \
+curl --location 'https://testpgapi.korpay.com/api/payments/detail?id=ctest0001a&tid=ktest6201m01012301251537000703' \
   --header 'Content-Type: application/json' \
   --header 'Authorization: 87c2c7752026253cfd0284a0f6be8ad9fdf07992d1b225326bce24c628db00d4'
 ```

@@ -55,6 +55,7 @@ const config = {
       }),
     ],
   ],
+  themes: ['@docusaurus/theme-live-codeblock'],
   // 해더 네이게이션
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */

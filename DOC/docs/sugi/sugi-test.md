@@ -2,6 +2,8 @@
 sidebar_position: 5
 ---
 
+import SugiChecker from '/src/components/Util/SugiChecker';
+
 # 수기결제 테스트
 
 데모로 수기결제 테스트를 진행 할 수 있는 페이지입니다.
@@ -13,15 +15,28 @@ sidebar_position: 5
 
 ## 승인 테스트
 
-```json
+```jsx live
+
+const json = {};
+
+json = {
+    "ordNo":"123456789112345678911234567891",
+    "mkey":"G/pYro4XipgrmecKdlvWwkSfGcg4ynESEMvFfX9pKRdSe4DeD8Zrit0erZM61aXZkiplylpIuEkvLYhbRPDPhA==Z",
+    "mid":"ktest5578m",
+    "goodsAmt":"5000",
+    "cardNo":"5236120116287096",
+    "expireYymm":"2301",
+    "quotaMon":"00",
+    "buyer_nm":"코페이",
+    "goodsNm":"결제테스트",
+    "ordHp":"01012345678",
+    "hashKey":""
+};
 
 ```
 
-## 취소 테스트
+<SugiChecker />
 
-```json
-
-```
 
 export const Green = ({children}) => (
 <span

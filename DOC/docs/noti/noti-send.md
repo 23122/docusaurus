@@ -2,6 +2,9 @@
 sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # 노티 연동
 
 가맹점에서 응답서버를 준비하시면 해당주소로 결제내역을 <Green>`POST`</Green> 방식으로 전달합니다.
@@ -153,7 +156,10 @@ Noti 통보일 (CurrentTimeMillis 형식)
 
 ## 노티 발송 예시
 
-```java title="단말기 승인샘플"
+<Tabs>
+<TabItem value="catApp" label="단말기 승인샘플">
+
+```js
 {
     gid=test11110g, 
     remainAmt=0, 
@@ -180,7 +186,11 @@ Noti 통보일 (CurrentTimeMillis 형식)
     notiDnt=20230411101512
 }
 ```
-```java title="온라인 승인샘플"
+
+</TabItem>
+<TabItem value="onlineApp" label="온라인 승인샘플">
+
+```js
 {
     cashCrctFlg=, 
     gid=test11110g, 
@@ -218,7 +228,11 @@ Noti 통보일 (CurrentTimeMillis 형식)
     notiDnt=20230411101211
 }
 ```
-```java title="단밀기 취소샘플"
+
+</TabItem>
+<TabItem value="java" label="단밀기 취소샘플">
+
+```js 
 {
     gid=test11110g, 
     remainAmt=0, 
@@ -245,44 +259,53 @@ Noti 통보일 (CurrentTimeMillis 형식)
 }
 
 ```
-```java title="온라인 취소샘플"
+
+</TabItem>
+
+<TabItem value="onlineCancle" label="온라인 취소샘플">
+
+```js 
 {
-    cashCrctFlg=, 
-    gid=test11110g, 
-    acqCardCd=02, 
+    cashCrctFlg=,
+    gid=test11110g,
+    acqCardCd=02,
     lmtDay=,
-    mid=ktest5599m, 
-    amt=1000, 
-    appNo=30039792, 
-    ccDnt=20230411101521, 
-    cardNo=12345678****1234, 
-    tid=ktest5599m01012304111010250264, 
-    hashStr=8eab4a185ae61d0ecf63dfc548913134d2eb0c49d2ad83732e2ba26d1785bc54, 
-    vid=ctest0001a, 
-    ordNm=홍길*, 
-    connCd=0005, 
-    ordNo=552440430050704, 
-    payMethod=CARD, 
-    fnNm=국민, 
-    quota=00, 
-    appDtm=20230411101055, 
-    ediDate=20230411101637, 
-    usePointAmt=0, 
-    authType=01, 
-    goodsName=테스트상품, 
-    appCardCd=02, 
-    charSet=1, 
-    resultCd=2001, 
-    cancelYN=Y, 
-    cardType=01, 
-    resultMsg=취소 성공, 
-    catId=ktest5599m, 
-    vacntNo=, 
-    ediNo=3040229491, 
-    socHpNo=, 
+    mid=ktest5599m,
+    amt=1000,
+    appNo=30039792,
+    ccDnt=20230411101521,
+    cardNo=12345678****1234,
+    tid=ktest5599m01012304111010250264,
+    hashStr=8eab4a185ae61d0ecf63dfc548913134d2eb0c49d2ad83732e2ba26d1785bc54,
+    vid=ctest0001a,
+    ordNm=홍길*,
+    connCd=0005,
+    ordNo=552440430050704,
+    payMethod=CARD,
+    fnNm=국민,
+    quota=00,
+    appDtm=20230411101055,
+    ediDate=20230411101637,
+    usePointAmt=0,
+    authType=01,
+    goodsName=테스트상품,
+    appCardCd=02,
+    charSet=1,
+    resultCd=2001,
+    cancelYN=Y,
+    cardType=01,
+    resultMsg=취소 성공,
+    catId=ktest5599m,
+    vacntNo=,
+    ediNo=3040229491,
+    socHpNo=,
     notiDnt=20230411101637
 }
+
 ```
+
+</TabItem>
+</Tabs>
 
 export const Green = ({children}) => (
 <span

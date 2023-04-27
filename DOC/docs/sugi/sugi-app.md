@@ -31,7 +31,7 @@ KORPAY발급 관리계정
 승인금액
 
 ---
-**cardNo** <Green>**String**</Green> <Gray>`20byte`</Gray><br/>
+**cardNo** <Green>**String**</Green> <Gray>`13byte`</Gray><br/>
 카드번호
 
 ---
@@ -43,10 +43,6 @@ KORPAY발급 관리계정
 할부기간(00(일시불), 01, 02...)
 
 ---
-**goodsAmt**  <Green>**String**</Green> <Gray>`12byte`</Gray><br/>
-승인금액
-
----
 **buyer_nm** <Green>**String**</Green> <Gray>`50byte`</Gray><br/>
 구매자명
 
@@ -55,7 +51,7 @@ KORPAY발급 관리계정
 상품명
 
 ---
-**ordHp** <Green>**String**</Green> <Gray>`20byte`</Gray><br/>
+**ordHp** <Green>**String**</Green> <Gray>`15byte`</Gray><br/>
 구매자 휴대폰 번호(01012345678)
 
 ---
