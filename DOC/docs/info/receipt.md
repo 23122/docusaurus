@@ -14,7 +14,7 @@ sidebar_position: 4
 ### 요청 파라미터
 ---
 **mid** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
-KORPAY발급 관리계정
+상점 ID (KORPAY제공 상점 MID)
 
 ---
 **ordNo** <Green>**String**</Green> <Gray>`30byte`</Gray><br/>

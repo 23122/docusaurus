@@ -6,9 +6,9 @@ sidebar_position: 4
 
 수기결제를 요청하는 예시입니다.
 
-:::warning
-테스트요청주소 : https://testpgapi2.korpay.com/api/manualpay <Green>`POST`</Green> <br/>
-실제 결제가 이뤄지기 때문에 테스트시 연락 선행 필수 (PG개발팀 : 070-7012-1447)
+:::info
+테스트요청주소 : https://testpgapi2.korpay.com/api/test/payAppTest <Green>`POST`</Green> <br/>
+**위주소는 테스트 주소임으로 실연동과는 차이가 있을 수 있습니다.**
 :::
 ## 파라미터 정보
 
@@ -24,7 +24,7 @@ MID 암호화키
 
 ---
 **mid** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
-KORPAY발급 관리계정
+상점 ID (KORPAY제공 상점 MID)
 
 ---
 **goodsAmt** <Green>**String**</Green> <Gray>`12byte`</Gray><br/>
@@ -104,10 +104,23 @@ KORPAY발급 관리계정
 결제 요청 예시
 
 ```shell title="요청예시"
-curl --request POST \
-  --url https://testpgapi2.korpay.com/api/manualpay \
+curl --location --request POST 'https://testpgapi2.korpay.com/api/test/payAppTest' \
   --header 'Content-Type: application/json' \
-  --data '{"ordNo":"123456789112345678911234567891","mkey":"G/pYro4XipgrmecKdlvWwkSfGcg4y","mid":"ktest5578m","goodsAmt":"5000","cardNo":"1234123412341234","expireYymm":"2301","quotaMon":"00","buyer_nm":"코페이","goodsNm":"결제테스트","ordHp":"01012345678","hashKey":"","certPw":"12","certNo":"990101"}'
+  --data-raw '{
+    "ordNo":"123456789112345678911234567891",
+    "mkey":"G/pYro4XipgrmecKdlvWwkSfGcg4ynESEMvFfX9pKRdSe4DeD8Zrit0erZM61aXZkiplylpIuEkvLYhbRPDPhA==",
+    "mid":"ktest5578m",
+    "goodsAmt":"5000",
+    "cardNo":"1234123412341234",
+    "expireYymm":"2301",
+    "quotaMon":"00",
+    "buyer_nm":"코페이",
+    "goodsNm":"결제테스트",
+    "ordHp":"01012345678",
+    "hashKey":"",
+    "certPw":"12",
+    "certNo":"990101"
+    }'
 ```
 
 

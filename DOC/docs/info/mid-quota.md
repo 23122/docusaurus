@@ -17,7 +17,7 @@ sidebar_position: 1
 ### 요청 파라미터
 ---
 **mid** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
-KORPAY발급 관리계정
+상점 ID (KORPAY제공 상점 MID)
 
 ---
 **mkey** <Green>**String**</Green> <Gray>`100byte`</Gray><br/>
@@ -32,7 +32,7 @@ MID 암호화 키
 
 ---
 **mid** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
-KORPAY발급 관리계정
+상점 ID (KORPAY제공 상점 MID)
 
 ---
 **quota** <Green>**String**</Green> <Gray>`2byte`</Gray><br/>

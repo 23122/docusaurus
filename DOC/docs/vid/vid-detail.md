@@ -66,7 +66,7 @@ sidebar_position: 4
 
 ---
 **appTm** <Green>**String**</Green> <Gray>`6byte`</Gray><br/>
-승인시간 (hhMMss)
+승인시간 (HHmmss)
 
 ---
 **ccDt** <Green>**String**</Green> <Gray>`8byte`</Gray><br/>
@@ -74,7 +74,7 @@ sidebar_position: 4
 
 ---
 **appTm** <Green>**String**</Green> <Gray>`6byte`</Gray><br/>
-취소시간 (hhMMss)
+취소시간 (HHmmss)
 
 ---
 **goodsAmt** <Blue>**int**</Blue> <Gray>`15byte`</Gray><br/>

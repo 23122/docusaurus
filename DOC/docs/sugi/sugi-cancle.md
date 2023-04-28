@@ -5,9 +5,10 @@ sidebar_position: 4
 # 수기결제요청취소
 
 수기결제 취소를 요청하는 예시입니다.
-:::warning
-테스트요청주소 : https://testpgapi2.korpay.com/api/cancel <Green>`POST`</Green><br/>
-실제 취소가 이뤄지기 때문에 테스트시 연락 선행 필수 (PG개발팀 : 070-7012-1447)
+
+:::info
+테스트요청주소 : https://testpgapi2.korpay.com/api/test/payCanTest <Green>`POST`</Green> <br/>
+**위주소는 테스트 주소임으로 실연동과는 차이가 있을 수 있습니다.**
 :::
 ## 파라미터 정보
 
@@ -23,7 +24,7 @@ sidebar_position: 4
 
 ---
 **mid** <Green>**String**</Green> <Gray>`10byte`</Gray><br/>
-KORPAY발급 관리계정
+상점 ID (KORPAY제공 상점 MID)
 
 ---
 **canNm** <Green>**String**</Green> <Gray>`30byte`</Gray><br/>

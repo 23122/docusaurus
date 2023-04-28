@@ -143,7 +143,7 @@ Noti 통보일 (CurrentTimeMillis 형식)
 
 ---
 **lmtDay** <Green>**String**</Green> <Red>온라인</Red> <br/>
-여분필드
+예약필드
 
 ---
 **resultCd** <Green>**String**</Green> <Red>온라인</Red> <br/>
