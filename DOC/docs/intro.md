@@ -2,46 +2,38 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# API 연동안내
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Korpay의 지불결제 서비스를 이용하는 가맹점이 가맹점의 web 페이지에서 Korpay와 결제 연동을 통해<br/>
+Korpay의 결제 서비스를 가맹점의 사용자에게 제공하는 방법을 제공합니다.
 
-## Getting Started
+## 연동준비
 
-Get started by **creating a new site**.
+코페이 PG서비스를 이용하실려면 먼저 영업담당자와의 계약이 필요합니다.<br/>
+이용가능한 서비스는 계약에따라 달라질 수 있습니다.<br/>
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### 연동 문의사항
 
-### What you'll need
+서비스 관련 문의 사항은 영업담당자에게 연락주세요.<br/>
+:::warning
+**수기결제(인증)은 별도전달합니다.**
+:::
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## API 테스트
+:::note
+본 사이트에서 제공하는 테스트주소는 실 결제가 일어나는 주소와 상의합니다. <br/>
+연동문서에서 제공하는 테스트는 실결제가 일어나지 않기 때문에 실연동시 차이가 있을 수 있습니다.<br/>
+:::
 
-## Generate a new site
+## 요구사항
 
-Generate a new Docusaurus site using the **classic template**.
+- Web server : SHA256 Hash값의 생성 / httpClient(http Background) 통신이 가능한 웹 서버
+- DBMS : Korpay에서는 결제 결과 DATA를 제공해 드리며 DB처리는 가맹점에서 관리하셔야 합니다. 이러한 경우에는 별도의 DBMS가 필요합니다.
+- 소스버전 : JAVA 1.7 이상입니다.
 
-The classic template will automatically be added to your project after you run the command:
+## 샘플소스
 
-```bash
-npm init docusaurus@latest DOC classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd DOC
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- 샘플소스는 가맹점의 환경에 맞도록 수정하여 사용할 수 있습니다.
+- Korpay PGAPI 는 표준 웹 통신만을 사용합니다.
+- 결제요청시에는 페이지이동(Form POST Action), API 통신시에는 httpClient 통신을 이용
+- HTTPS API Request(httpClient 통신)= httpClient 등의 http Background 통신이 가능한 유틸을 통해서 웹페이지를 요청후 그 결과를 수신

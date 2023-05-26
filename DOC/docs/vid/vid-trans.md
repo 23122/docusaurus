@@ -4,11 +4,11 @@ sidebar_position: 3
 
 # 거래내역 리스트
 
-수기결제를 요청하는 예시입니다.
+거래내역 리스트를 요청하는 예시입니다.
 
 :::info
 테스트요청주소 : https://testpgapi.korpay.com/api/payments/list <Green>`GET`</Green> <br/>
-기술지원 (PG개발팀 : 070-7012-1447)
+기술지원 (PG개발팀 : dev@korpay.com , 070-7012-1447)
 :::
 ## 파라미터 정보
 
@@ -113,11 +113,11 @@ sidebar_position: 3
 승인금액 합계
 
 ---
-**cancel** <Blue>**int**</Blue> <Gray>`15byte`</Gray><br/>
+**beforeCancel** <Blue>**int**</Blue> <Gray>`15byte`</Gray><br/>
 당일 취소금액 합계 (전취소)
 
 ---
-**aftercancel** <Blue>**int**</Blue> <Gray>`15byte`</Gray><br/>
+**afterCancel** <Blue>**int**</Blue> <Gray>`15byte`</Gray><br/>
 결제일 지난 후 취소금액 합계 (후취소)
 
 

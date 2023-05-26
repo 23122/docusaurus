@@ -14,7 +14,7 @@ sidebar_position: 1
 4. 노티 수신확인은 `HTTP STATUS`로 확인합니다. (200:수신, 이외 미수신)
 5. 미수신 일경우 2분간격으로 5회 재전송 실시합니다.
 6. **연동문의는 영업담당자에게 문의**
-7. 기술지원 (PG개발팀 : 070-7012-1447)
+7. 기술지원 (PG개발팀 : dev@korpay.com , 070-7012-1447)
 
 
 [//]: # (Create a file at `src/pages/my-react-page.js`:)

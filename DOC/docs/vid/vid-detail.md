@@ -8,7 +8,7 @@ sidebar_position: 4
 
 :::info
 테스트요청주소 : https://testpgapi.korpay.com/api/payments/detail <Green>`GET`</Green> <br/>
-기술지원 (PG개발팀 : 070-7012-1447)
+기술지원 (PG개발팀 : dev@korpay.com , 070-7012-1447)
 :::
 ## 파라미터 정보
 

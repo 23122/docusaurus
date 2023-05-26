@@ -60,11 +60,11 @@ sidebar_position: 3
 구매자명
 
 ---
-**ordTel** <Green>**String**</Green> <Red>Null·Able</Red> <Gray>`15byte`</Gray><br/>
+**ordTel** <Green>**String**</Green> <Red>nullable</Red> <Gray>`15byte`</Gray><br/>
 구매자 휴대폰 번호(01012345678)
 
 ---
-**ordEmail** <Green>**String**</Green> <Red>Null·Able</Red> <Gray>`40byte`</Gray><br/>
+**ordEmail** <Green>**String**</Green> <Red>nullable</Red> <Gray>`40byte`</Gray><br/>
 구매자 이메일 (dev@korpay.com)
 
 ---
@@ -80,15 +80,15 @@ sidebar_position: 3
 카드유형 (01 : 개인, 02 : 법인)
 
 ---
-**mbsUsrId** <Green>**String**</Green> <Red>Null·Able</Red> <Gray>`20byte`</Gray><br/>
+**mbsUsrId** <Green>**String**</Green> <Red>nullable</Red> <Gray>`20byte`</Gray><br/>
 고객ID
 
 ---
-**mbsReserved** <Green>**String**</Green> <Red>Null·Able</Red> <Gray>`20byte`</Gray> <br/>
+**mbsReserved** <Green>**String**</Green> <Red>nullable</Red> <Gray>`20byte`</Gray> <br/>
 예약필드
 
 ---
-**reqType** <Green>**String**</Green> <Red>Null·Able</Red> <Gray>`1byte`</Gray> <br/>
+**reqType** <Green>**String**</Green> <Red>nullable</Red> <Gray>`1byte`</Gray> <br/>
 빌키발급옵션 (0 : 빌키발행, 1 : 빌키발행+결제)
 
 ---

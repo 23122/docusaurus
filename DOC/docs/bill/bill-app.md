@@ -47,19 +47,19 @@ MID 암호화키
 구매자명
 
 ---
-**ordTel** <Green>**String**</Green> <Red>Null·Able</Red> <Gray>`15byte`</Gray><br/>
+**ordTel** <Green>**String**</Green> <Red>nullable</Red> <Gray>`15byte`</Gray><br/>
 구매자 휴대폰 번호(01012345678)
 
 ---
-**ordEmail** <Green>**String**</Green> <Red>Null·Able</Red> <Gray>`40byte`</Gray><br/>
+**ordEmail** <Green>**String**</Green> <Red>nullable</Red> <Gray>`40byte`</Gray><br/>
 구매자 이메일 (dev@korpay.com)
 
 ---
-**mbsUsrId** <Green>**String**</Green> <Red>Null·Able</Red> <Gray>`20byte`</Gray><br/>
+**mbsUsrId** <Green>**String**</Green> <Red>nullable</Red> <Gray>`20byte`</Gray><br/>
 고객ID
 
 ---
-**mbsReserved** <Green>**String**</Green> <Red>Null·Able</Red> <Gray>`20byte`</Gray> <br/>
+**mbsReserved** <Green>**String**</Green> <Red>nullable</Red> <Gray>`20byte`</Gray> <br/>
 예약필드
 
 ---

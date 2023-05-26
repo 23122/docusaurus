@@ -61,7 +61,6 @@ SMS 결제 가능여부(0: 불가능 1: 가능)
 ```shell title="요청예시"
 curl --request POST \
   --url https://testpgapi2.korpay.com/api/init \
-  --header 'Authorization: Basic dGVzdF9za196WExrS0V5cE5BcldtbzUwblgzbG1lYXhZRzVSOg==' \
   --header 'Content-Type: application/json' \
   --data '{"mid":"ktest5578m","mkey":"G/pYro4XipgrmecKdlvWwkSfGcg4y"}'
 ```

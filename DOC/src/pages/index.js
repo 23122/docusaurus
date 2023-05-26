@@ -4,10 +4,17 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import { Redirect } from '@docusaurus/router';
 
 import styles from './index.module.css';
 
-function HomepageHeader() {
+function Home() {
+    return <Redirect to='/docs/intro' />;
+}
+
+export default Home;
+
+/*function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
@@ -38,4 +45,4 @@ export default function Home() {
       </main>
     </Layout>
   );
-}
+}*/

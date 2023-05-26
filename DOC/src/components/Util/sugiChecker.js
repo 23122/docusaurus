@@ -8,7 +8,7 @@ function SugiChecker() {
 
     async function checkStatus() {
         try { // todo
-            const response = await fetch("http://localhost:8081/api/test/payAppTest", {
+            const response = await fetch("https://testpgapi2.korpay.com/api/test/payAppTest", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function HttpStatusChecker() {
     const [url, setUrl] = useState('');
     const [status, setStatus] = useState('');
     const [option, setOption] = useState('');
+    const [timeLeft, setTimeLeft] = useState(0);
 
     async function checkStatus() {
         try {
+            setTimeLeft(10);
             let jsonData = {};
             switch (option) {
                 case '': alert('항목을 선택하세요');
+                    setTimeLeft(0);
                     return false;
                     break;
                 case '1':
@@ -147,12 +150,17 @@ function HttpStatusChecker() {
                     jsonData={};
                     break;
             }
+
+            const formData = new URLSearchParams();
+            for (const key in jsonData) {
+                formData.append(key, jsonData[key]);
+            }
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: JSON.stringify(jsonData),
+                body: formData.toString(),
             });
             setStatus(`${response.status} ${response.statusText}`);
         } catch (error) {
@@ -160,7 +168,16 @@ function HttpStatusChecker() {
             setStatus('Error');
         }
     }
-
+    
+    useEffect(() => {
+        let timer;
+        if (timeLeft > 0) {
+            timer = setTimeout(() => {
+                setTimeLeft(timeLeft - 1);
+            }, 1000);
+        }
+        return () => clearTimeout(timer);
+    }, [timeLeft]);
 
     return (
         <div>
@@ -180,7 +197,9 @@ function HttpStatusChecker() {
                 value={url}
                 onChange={(event) => setUrl(event.target.value)}
             />
-            <button className='httpBtn' onClick={checkStatus}>노티전송</button>
+            <button className='httpBtn2' onClick={checkStatus} disabled={timeLeft > 0}>
+                {timeLeft > 0 ? `노티전송 (${timeLeft}s)` : '노티전송'}
+            </button>
             {status && <div>Status: {status}</div>}
         </div>
     );

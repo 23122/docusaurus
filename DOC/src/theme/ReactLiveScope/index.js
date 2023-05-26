@@ -1,15 +1,17 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import CodeBlock from '@theme/CodeBlock';
 import axios from 'axios';
 // Add react-live imports you need here
 
 function SugiAppChecker(json) {
   const [status, setStatus] = useState('');
+  const [timeLeft, setTimeLeft] = useState(0);
 
   async function appCheck() {
-    try { // todo
-      console.log(json.json);
-      const response = await fetch("http://localhost:8081/api/test/payAppTest", {
+    try {
+      setTimeLeft(10);
+      // todo
+      const response = await fetch("https://testpgapi2.korpay.com/api/test/payAppTest", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,9 +26,25 @@ function SugiAppChecker(json) {
     }
   }
 
+  useEffect(() => {
+    let timer;
+    if (timeLeft > 0) {
+      timer = setTimeout(() => {
+        setTimeLeft(timeLeft - 1);
+      }, 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [timeLeft]);
+
   return (
       <div>
-        <button className='httpBtn' onClick={appCheck}>결제</button>
+        <button
+            className='httpBtn'
+            onClick={appCheck}
+            disabled={timeLeft > 0}
+        >
+          {timeLeft > 0 ? `결제 (${timeLeft}s)` : '결제'}
+        </button>
         {status && <div>결과값: {status}</div>}
       </div>
   );
@@ -34,11 +52,13 @@ function SugiAppChecker(json) {
 
 function SugiCanChecker(json) {
   const [status, setStatus] = useState('');
+  const [timeLeft, setTimeLeft] = useState(0);
 
   async function canCheck() {
-    try { // todo
-      console.log(json.json);
-      const response = await fetch("http://localhost:8081/api/test/payCanTest", {
+    try {
+      setTimeLeft(10);
+      // todo
+      const response = await fetch("https://testpgapi2.korpay.com/api/test/payCanTest", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,9 +73,25 @@ function SugiCanChecker(json) {
     }
   }
 
+  useEffect(() => {
+    let timer;
+    if (timeLeft > 0) {
+      timer = setTimeout(() => {
+        setTimeLeft(timeLeft - 1);
+      }, 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [timeLeft]);
+
   return (
       <div>
-        <button className='httpBtn' onClick={canCheck}>취소</button>
+        <button
+            className='httpBtn'
+            onClick={canCheck}
+            disabled={timeLeft > 0}
+        >
+          {timeLeft > 0 ? `취소 (${timeLeft}s)` : '취소'}
+        </button>
         {status && <div>결과값: {status}</div>}
       </div>
   );
@@ -63,11 +99,13 @@ function SugiCanChecker(json) {
 
 function BillRegChecker(json) {
   const [status, setStatus] = useState('');
+  const [timeLeft, setTimeLeft] = useState(0);
 
   async function billRegCheck() {
-    try { // todo
-      console.log(json.json);
-      const response = await fetch("http://localhost:8081/api/test/billRegTest", {
+    try {
+      setTimeLeft(10);
+      // todo
+      const response = await fetch("https://testpgapi2.korpay.com/api/test/billRegTest", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,9 +120,25 @@ function BillRegChecker(json) {
     }
   }
 
+  useEffect(() => {
+    let timer;
+    if (timeLeft > 0) {
+      timer = setTimeout(() => {
+        setTimeLeft(timeLeft - 1);
+      }, 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [timeLeft]);
+
   return (
       <div>
-        <button className='httpBtn' onClick={billRegCheck}>발급</button>
+        <button
+            className='httpBtn'
+            onClick={canCheck}
+            disabled={timeLeft > 0}
+        >
+          {timeLeft > 0 ? `생성 (${timeLeft}s)` : '생성'}
+        </button>
         {status && <div>결과값: {status}</div>}
       </div>
   );
@@ -92,11 +146,13 @@ function BillRegChecker(json) {
 
 function BillAppChecker(json) {
   const [status, setStatus] = useState('');
+  const [timeLeft, setTimeLeft] = useState(0);
 
   async function billAppCheck() {
-    try { // todo
-      console.log(json.json);
-      const response = await fetch("http://localhost:8081/api/test/billAppTest", {
+    try {
+      setTimeLeft(10);
+      // todo
+      const response = await fetch("https://testpgapi2.korpay.com/api/test/billAppTest", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -113,7 +169,13 @@ function BillAppChecker(json) {
 
   return (
       <div>
-        <button className='httpBtn' onClick={billAppCheck}>결제</button>
+        <button
+            className='httpBtn'
+            onClick={canCheck}
+            disabled={timeLeft > 0}
+        >
+          {timeLeft > 0 ? `결제 (${timeLeft}s)` : '결제'}
+        </button>
         {status && <div>결과값: {status}</div>}
       </div>
   );

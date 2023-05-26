@@ -16,13 +16,13 @@
   --ifm-color-primary-lightest: #ff1e2e;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: 'omyu_pretty',sans-serif;
-  --ifm-font-family-monospace: omyu_pretty;
+  --ifm-font-family-base: 'SUITE-Regular',sans-serif;
+  --ifm-font-family-monospace: SUITE-Regular;
 }
 
-.table-of-contents{
-  font-size: 1rem !important;
-}
+/*.table-of-contents{*/
+/*  font-size: 1rem !important;*/
+/*}*/
 
 .centered-image {
   text-align: center;
@@ -48,13 +48,25 @@ input[placeholder], input, button, select{
   color: #FFF;
   border-radius: 3px;
   height: 30px;
-  width: 60px;
+  width: 80px;
+}
+.httpBtn2{
+  border: none;
+  background-color: rgb(38, 178, 38);
+  color: #FFF;
+  border-radius: 3px;
+  height: 30px;
+  width: 100px;
+}
+.disabled {
+  background-color: #ccc !important;
 }
 .selecter{
   border: none;
   width: 140px;
   margin-bottom: 1rem;
 }
+
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
@@ -66,8 +78,8 @@ input[placeholder], input, button, select{
   --ifm-color-primary-lighter: #fc0012;
   --ifm-color-primary-lightest: #ff1e2e;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-font-family-base: 'omyu_pretty',sans-serif;
-  --ifm-font-family-monospace: omyu_pretty;
+  --ifm-font-family-base: 'SUITE-Regular',sans-serif;
+  --ifm-font-family-monospace: SUITE-Regular;
 }
 
 @font-face {
@@ -78,16 +90,9 @@ input[placeholder], input, button, select{
 }
 
 @font-face {
-  font-family: 'TheJamsil5Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'neurimboGothicRegular';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/neurimboGothicRegular.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'SUITE-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+  font-weight: 400;
   font-style: normal;
 }
 
