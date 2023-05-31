@@ -227,8 +227,6 @@ curl --location --request POST '수신받을 노티주소' \
     --data-urlencode "ediNo=3040229491" \
     --data-urlencode "socHpNo=" \
     --data-urlencode "notiDnt=20230411101211"
-
-
 ```
 
 </TabItem>
@@ -260,8 +258,6 @@ curl --location --request POST '수신받을 노티주소' \
     --data-urlencode "goodsName=1234567890" \
     --data-urlencode "appCardCd=02" \
     --data-urlencode "notiDnt=20230411102637"
-
-
 ```
 
 </TabItem>
@@ -305,7 +301,6 @@ curl --location --request POST '수신받을 노티주소' \
     --data-urlencode "ediNo=3040229491" \
     --data-urlencode "socHpNo=" \
     --data-urlencode "notiDnt=20230411101637"
-
 ```
 
 </TabItem>

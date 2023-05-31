@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # 거래상세내역
 
-수기결제를 요청하는 예시입니다.
+거래 상세 내역을 요청하는 예시입니다. 
 
 :::info
 테스트요청주소 : https://testpgapi.korpay.com/api/payments/detail <Green>`GET`</Green> <br/>
